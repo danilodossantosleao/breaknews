@@ -1,0 +1,295 @@
+{
+  "theme": "dark",
+  "project_name": "NEXUS Gaming Hub",
+  "archetype": "ELECTRIC & NEON / TACTICAL CYBERPUNK (Commercial SaaS command center)",
+  "locale": "pt-BR",
+  "typography": {
+    "font_family_heading": "Space Grotesk, sans-serif",
+    "font_family_body": "Geist, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "font_imports": [
+      "@import \"@fontsource-variable/space-grotesk\";",
+      "@import \"@fontsource-variable/geist\";",
+      "@import \"@fontsource-variable/jetbrains-mono\";"
+    ],
+    "scale_px": {
+      "display": 56,
+      "h1": 40,
+      "h2": 30,
+      "h3": 22,
+      "h4": 18,
+      "body": 16,
+      "caption": 14
+    },
+    "rules": {
+      "headings": "font-heading font-bold tracking-tight text-[#F4F5FA]",
+      "subheadings": "font-heading font-medium tracking-normal text-[#9AA3B5]",
+      "body": "font-sans font-normal leading-relaxed text-[#F4F5FA]",
+      "mono_labels": "font-mono uppercase text-xs tracking-wider text-[#22D3EE]",
+      "banned_for_headings": ["Inter", "Roboto", "Open Sans", "Lato"]
+    }
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#080A10",
+        "on_bg": "#F4F5FA",
+        "on_bg_muted": "#9AA3B5",
+        "roles": {
+          "border": "#1A2033",
+          "accent_purple": "#8B5CF6",
+          "accent_cyan": "#22D3EE",
+          "success": "#10B981",
+          "warning": "#F59E0B",
+          "danger": "#EF4444"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#10131D",
+        "on_bg": "#F4F5FA",
+        "on_bg_muted": "#9AA3B5",
+        "roles": {
+          "border": "#1F263B",
+          "hover_bg": "#151A27",
+          "active_bg": "#1A2033"
+        }
+      },
+      {
+        "name": "surface_elevated",
+        "kind": "solid",
+        "bg": "#171B29",
+        "on_bg": "#F4F5FA",
+        "on_bg_muted": "#9AA3B5",
+        "roles": {
+          "border": "#28324D",
+          "glow_purple": "rgba(139, 92, 246, 0.15)",
+          "glow_cyan": "rgba(34, 211, 238, 0.15)"
+        }
+      },
+      {
+        "name": "sidebar_and_header",
+        "kind": "solid",
+        "bg": "#0B0E17",
+        "on_bg": "#F4F5FA",
+        "on_bg_muted": "#9AA3B5",
+        "roles": {
+          "border": "#161B2B",
+          "active_item": "#8B5CF6",
+          "active_item_bg": "rgba(139, 92, 246, 0.12)"
+        }
+      },
+      {
+        "name": "hero_banner",
+        "kind": "gradient",
+        "contrast_against": "#080A10",
+        "guarantee": "radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 60%), linear-gradient(180deg, #10131D 0%, #080A10 100%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#CBD5E1",
+        "roles": {
+          "tag_bg": "rgba(34, 211, 238, 0.12)",
+          "tag_text": "#22D3EE"
+        }
+      },
+      {
+        "name": "game_card_media",
+        "kind": "image",
+        "contrast_against": "#0A0D15",
+        "guarantee": "linear-gradient(180deg, transparent 40%, rgba(8, 10, 16, 0.95) 90%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#E2E8F0"
+      },
+      {
+        "name": "badge_status_want",
+        "kind": "solid",
+        "bg": "#1E1B4B",
+        "on_bg": "#C7D2FE",
+        "on_bg_muted": "#A5B4FC"
+      },
+      {
+        "name": "badge_status_playing",
+        "kind": "solid",
+        "bg": "#064E3B",
+        "on_bg": "#6EE7B7",
+        "on_bg_muted": "#A7F3D0"
+      },
+      {
+        "name": "badge_status_completed",
+        "kind": "solid",
+        "bg": "#581C87",
+        "on_bg": "#F0ABFC",
+        "on_bg_muted": "#E879F9"
+      },
+      {
+        "name": "badge_status_paused",
+        "kind": "solid",
+        "bg": "#451A03",
+        "on_bg": "#FCD34D",
+        "on_bg_muted": "#FDE68A"
+      },
+      {
+        "name": "badge_status_dropped",
+        "kind": "solid",
+        "bg": "#450A0A",
+        "on_bg": "#FCA5A5",
+        "on_bg_muted": "#FECACA"
+      }
+    ],
+    "accent": "#8B5CF6",
+    "on_accent": "#FFFFFF",
+    "accent_cyan": "#22D3EE",
+    "on_accent_cyan": "#041B26",
+    "border_subtle": "#1A2033",
+    "border_strong": "#28324D"
+  },
+  "entry_surfaces": {
+    "/": "command center dashboard — contextual greeting + stat metrics strip top, 8-col active feed & updates left, 4-col release radar & pinned library right",
+    "/login": "branded split auth — cyberpunk artwork + positioning telemetry panel left, credentials form with instant guest demo login right",
+    "/register": "branded split auth — cyberpunk artwork + positioning telemetry panel left, signup form with gamer tag & platform selection right",
+    "/onboarding": "guided tactical setup — step-by-step preference configurator (platforms, favorite genres, top tracked games, notification alert rules)",
+    "/library": "personal gaming vault — filter toolbar with view toggle top, responsive high-res cover grid / dense list with status badges",
+    "/library/:gameId": "game mini-portal — immersive hero banner with trailer, personal progress/rating/notes card, exclusive patch notes feed and DLC roadmap",
+    "/news": "consolidated gaming intel — source classifier badges, AI synthesis trigger, card/compact deduplicated feed with category tabs",
+    "/updates": "patch notes & telemetry radar — version timeline per tracked game with change highlights, DLC badges, and read markers",
+    "/calendar": "gaming release calendar — month matrix + list view toggle, confirmed/estimated indicators, and countdown reminder toggles",
+    "/explore": "game discovery matrix — spotlight hero, genre carousel, trending games, instant 'Adicionar à Biblioteca' quick actions",
+    "/notifications": "alert telemetry center — per-game frequency tuning, critical patch alerts, release day reminders, mark-all-as-read",
+    "/saved": "gamer intelligence briefcase — saved articles, customized collections, personal walkthrough notes",
+    "/settings": "command preferences — profile gamer-tag, platform links, telemetry sync, pt-BR language defaults, notification thresholds",
+    "/404": "cyberpunk glitch screen — 404 signal lost illustration with quick jump buttons back to Command Center and Library"
+  },
+  "layout_and_grids": {
+    "app_shell": "flex h-screen bg-[#080A10] text-[#F4F5FA] overflow-hidden antialiased",
+    "sidebar": "w-64 xl:w-72 bg-[#0B0E17] border-r border-[#161B2B] flex flex-col justify-between shrink-0 hidden md:flex z-30",
+    "mobile_nav": "md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#0B0E17]/95 backdrop-blur-xl border-t border-[#161B2B] flex items-center justify-around z-50 px-2",
+    "main_content": "flex-1 flex flex-col min-w-0 overflow-y-auto bg-[#080A10]",
+    "header": "sticky top-0 z-40 h-16 bg-[#080A10]/90 backdrop-blur-xl border-b border-[#1A2033] px-6 flex items-center justify-between",
+    "dashboard_grid": "grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 max-w-7xl mx-auto w-full",
+    "stat_cards_grid": "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full",
+    "library_grid": "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-5",
+    "calendar_grid": "grid grid-cols-7 gap-px bg-[#1A2033] rounded-xl overflow-hidden border border-[#1A2033]"
+  },
+  "motion": {
+    "page_transition": {
+      "initial": { "opacity": 0, "y": 8 },
+      "animate": { "opacity": 1, "y": 0 },
+      "transition": { "duration": 0.25, "ease": "easeOut" }
+    },
+    "card_hover": "transition-all duration-200 hover:-translate-y-1 hover:border-[#8B5CF6]/50 hover:shadow-[0_8px_30px_rgba(139,92,246,0.15)]",
+    "glow_pulse": "animate-pulse duration-1000",
+    "respect_reduced_motion": "motion-reduce:transition-none motion-reduce:transform-none"
+  },
+  "accessibility": {
+    "wcag_compliance": "WCAG AA / APCA verified dark mode palette (min contrast 4.5:1 for body and captions, 3:1 for large headers)",
+    "data_testid_policy": "All clickable buttons, navigation items, inputs, filters, tabs, status pills, and modal triggers must have descriptive kebab-case data-testid attributes",
+    "keyboard_shortcuts": "Ctrl+K or Cmd+K opens global command palette search; Esc closes dialogs; Tab/Arrow keys for menu traversal",
+    "focus_states": "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080A10]"
+  },
+  "image_urls": {
+    "cyber_city_banner": {
+      "url": "https://images.unsplash.com/photo-1672872476232-da16b45c9001?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxjeWJlcnB1bmslMjBnYW1pbmclMjBmdXR1cmlzdGljJTIwdmlkZW8lMjBnYW1lJTIwcG9zdGVyfGVufDB8fHx8MTc5MTU1MjA3Mnww&ixlib=rb-4.1.0&q=85",
+      "category": "Hero & Auth Panels",
+      "description": "Futuristic cyberpunk neon city skyline at night"
+    },
+    "battlestation_setup": {
+      "url": "https://images.unsplash.com/photo-1785708361382-107601e165fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwyfHx2aWRlbyUyMGdhbWUlMjBhY3Rpb24lMjBmYW50YXN5JTIwbGFuZHNjYXBlfGVufDB8fHx8MTc5MTU1MjA3Mnww&ixlib=rb-4.1.0&q=85",
+      "category": "Command Center Ambient / Detail",
+      "description": "Curved high-end gaming monitor battlestation setup"
+    },
+    "controller_cyber": {
+      "url": "https://images.unsplash.com/photo-1759692788195-b95da1f4a04c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHw0fHxjeWJlcnB1bmslMjBnYW1pbmclMjBmdXR1cmlzdGljJTIwdmlkZW8lMjBnYW1lJTIwcG9zdGVyfGVufDB8fHx8MTc5MTU1MjA3Mnww&ixlib=rb-4.1.0&q=85",
+      "category": "Onboarding & Cards",
+      "description": "Gamer controller and keyboard with ambient cyber lighting"
+    },
+    "fantasy_landscape": {
+      "url": "https://images.unsplash.com/photo-1763198216883-7473e2c7eabb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGdhbWUlMjBhY3Rpb24lMjBmYW50YXN5JTIwbGFuZHNjYXBlfGVufDB8fHx8MTc5MTU1MjA3Mnww&ixlib=rb-4.1.0&q=85",
+      "category": "Game Mini-Portal Banners",
+      "description": "Misty mountains with fantasy castle landscape for RPG games"
+    }
+  },
+  "seed_games_catalog": [
+    {
+      "id": "cyberpunk-2077",
+      "title": "Cyberpunk 2077: Phantom Liberty",
+      "year": 2023,
+      "genre": "RPG / Sci-Fi / Ação",
+      "platforms": ["PC", "PS5", "Xbox Series X"],
+      "developer": "CD PROJEKT RED",
+      "cover": "https://images.unsplash.com/photo-1672872476232-da16b45c9001?crop=entropy&cs=srgb&fm=jpg&w=600&q=80",
+      "banner": "https://images.unsplash.com/photo-1672872476232-da16b45c9001?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85",
+      "default_status": "Jogando",
+      "rating": 9.5,
+      "latest_patch": "v2.13 — Suporte FSR 3 e melhorias de telemetria",
+      "patch_date": "2026-08-15"
+    },
+    {
+      "id": "elden-ring-erdtree",
+      "title": "Elden Ring: Shadow of the Erdtree",
+      "year": 2024,
+      "genre": "Soulslike / Ação RPG",
+      "platforms": ["PC", "PS5", "PS4", "Xbox Series X"],
+      "developer": "FromSoftware",
+      "cover": "https://images.unsplash.com/photo-1763198216883-7473e2c7eabb?crop=entropy&cs=srgb&fm=jpg&w=600&q=80",
+      "banner": "https://images.unsplash.com/photo-1763198216883-7473e2c7eabb?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85",
+      "default_status": "Completado 100%",
+      "rating": 10.0,
+      "latest_patch": "Regulagem de balanceamento de armas e chefes",
+      "patch_date": "2026-08-10"
+    },
+    {
+      "id": "gta-6",
+      "title": "Grand Theft Auto VI",
+      "year": 2026,
+      "genre": "Ação / Mundo Aberto",
+      "platforms": ["PS5", "Xbox Series X"],
+      "developer": "Rockstar Games",
+      "cover": "https://images.unsplash.com/photo-1607896426171-99097eb60cb6?crop=entropy&cs=srgb&fm=jpg&w=600&q=80",
+      "banner": "https://images.unsplash.com/photo-1607896426171-99097eb60cb6?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85",
+      "default_status": "Quero jogar",
+      "rating": null,
+      "latest_patch": "Trailer oficial 2 com prévia de data de lançamento",
+      "patch_date": "2026-08-20"
+    },
+    {
+      "id": "hades-2",
+      "title": "Hades II",
+      "year": 2025,
+      "genre": "Roguelike / Ação",
+      "platforms": ["PC", "Switch 2", "PS5"],
+      "developer": "Supergiant Games",
+      "cover": "https://images.unsplash.com/photo-1762268861745-c3e879d1c2b8?crop=entropy&cs=srgb&fm=jpg&w=600&q=80",
+      "banner": "https://images.unsplash.com/photo-1762268861745-c3e879d1c2b8?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85",
+      "default_status": "Jogando",
+      "rating": 9.3,
+      "latest_patch": "Major Update 4: As Profundezas do Olimpo",
+      "patch_date": "2026-08-05"
+    },
+    {
+      "id": "black-myth-wukong",
+      "title": "Black Myth: Wukong",
+      "year": 2024,
+      "genre": "Ação / Mitologia",
+      "platforms": ["PC", "PS5"],
+      "developer": "Game Science",
+      "cover": "https://images.unsplash.com/photo-1761743979227-16da705af328?crop=entropy&cs=srgb&fm=jpg&w=600&q=80",
+      "banner": "https://images.unsplash.com/photo-1761743979227-16da705af328?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85",
+      "default_status": "Zerado",
+      "rating": 9.0,
+      "latest_patch": "Patch 1.0.9 — Correções de otimização gráfica",
+      "patch_date": "2026-07-28"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Template is farm-ts (FastAPI backend + Vite/React 19 TypeScript frontend with Tailwind v4). CSS entry is frontend/src/index.css.",
+    "Retheme index.css: Import Space Grotesk, Geist and JetBrains Mono from @fontsource-variable. Set default dark theme values in .dark and :root.",
+    "Ensure index.html has class='dark' on the <html> tag so dark mode is active by default.",
+    "Implement comprehensive mock + live FastAPI endpoints for games library CRUD, news feed with AI summary mock, updates tracker, release calendar, and user profile.",
+    "Build the Command Palette (Ctrl+K or Cmd+K) accessible from anywhere in the app with grouped instant results (Jogos, Notícias, Patches, Ações Rápidas).",
+    "Provide rich interactive states: card hover glow, tab switches, list/grid toggles, tag filter chips, star/numeric rating selector, private notes editor with autosave, and Sonner toast feedback for all CRUD operations.",
+    "Language is Portuguese (pt-BR) throughout all UI labels, dates (e.g. '24 de agosto de 2026'), status badges ('Jogando', 'Quero jogar', 'Zerado', 'Completado 100%', 'Pausado', 'Abandonado'), and navigation links.",
+    "Always include data-testid on every button, input, navigation link, card, and filter pill for robust automated testing."
+  ]
+}
